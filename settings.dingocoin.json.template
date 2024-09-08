@@ -1347,7 +1347,7 @@
     // block_parallel_tasks: Use multiple threads to do blockchain syncing which greatly improves the initial sync speed, but there is a drawback.
     //                       If you sync using more than 1 parallel task, then historical balance data for wallet addresses can possibly be saved out-of-order and there is currently no workaround for this.
     //                       Therefore, it is recommended to keep this setting to 1 parallel task for now until a proper solution can be procured for the historical balance issue.
-    "block_parallel_tasks": 1,
+    "block_parallel_tasks": 4,
     // update_timeout: The amount of time to wait (in milliseconds) before moving to the next block or transaction during blockchain sync or reindex (/path/to/node scripts/sync.js update or /path/to/node scripts/sync.js reindex)
     "update_timeout": 10,
     // check_timeout: The amount of time to wait (in milliseconds) before moving to the next block or transaction during a check sync (/path/to/node scripts/sync.js check)
