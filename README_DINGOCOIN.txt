@@ -33,17 +33,14 @@ eIquidus explorer is forked from:
 Changes specific to DINGOCOIN
 =====================================
 
-1. Recommended config: dingocoin ready settings.json.template - default social images in footer (insert users, passwords, database name at the top).
-2. Config with better social media images. Dingocoin ready settings.json.with_logos.template (insert users, passwords, database name at the top).
-   * Social images and configuration are ready to use. 
-3. Added Discord, X, Github and Telegram footer images to public/img (please see 2.).
+2. Dingocoin config template. Dingocoin ready (insert users, passwords, database name at the top of file). Better social images are included. 
+3. Added Discord, X, Github and Telegram footer images to public/img (please see 1.).
 4. Added basic SEO meta data into the head: title, author and keywords. How-to add more meta data is described in settings.json as a comment.
-5. Background of Richlist pie set to transparent, grid: {borderWidth:0, shadow:false, background:'transparent'} in views/richlist.pug.
-6. Dingocoin images everywhere.
-7. Dingocoin screenshot.
-8. Added robots.txt and sitemap.xml.
-9. Added the Dingocoin theme public/css/themes/dingo/.
-10. Dingocoin specific changes are described in file README_DINGOCOIN.txt.
+5. Dingocoin images everywhere.
+6. Dingocoin screenshot.
+7. Added robots.txt and sitemap.xml.
+8. Added the Dingocoin theme public/css/themes/dingo/.
+9. Dingocoin specific changes are described in file README_DINGOCOIN.txt.
  
 
 
