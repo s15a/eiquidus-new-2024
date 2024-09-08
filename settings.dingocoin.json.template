@@ -224,7 +224,7 @@
         "masternodes_panel": {
           // enabled: Enable/disable the masternode panel (true/false)
           //          If set to false, the masternode panel will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
