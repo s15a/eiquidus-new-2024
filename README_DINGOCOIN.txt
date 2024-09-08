@@ -15,6 +15,9 @@ Index
 - Update Peers script
 - Update Transactions script
 - Rescan and flatten the tx count script
+- Compare databases script
+- Prepare for db sync script
+- Logrotate
 
 
 
