@@ -357,12 +357,12 @@ for i in 1 2 3 4 5 6 7 8 9 10 ; do
    s1=404
    s2=404
 
-   # decimals working
-   #a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution )
-   #b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution )
-   # decimals disturbed
-   a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
-   b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
+   # regular state
+   a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution )
+   b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution )
+   # decimals disturbed - test only
+   #a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
+   #b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
 
    s1=$( echo $a | sed "1,$ s/^\(.*\) STATUS_CODE=\(.*\)$/\2/" )
    s2=$( echo $b | sed "1,$ s/^\(.*\) STATUS_CODE=\(.*\)$/\2/" )
