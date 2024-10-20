@@ -286,7 +286,7 @@ exit 0
 Update Transactions regular user version script
 =======================================================
 
-Update Transactions script is to be executed only as an unprivileged user. It's to be cron executed every minute, the "n=$(( $l-5 ))" is meant for 1min update intervals.
+Update Transactions script is to be executed only as an unprivileged user. It's to be cron executed every minute. 2 or more parallel update threads are recomended.
 
 ########################################################################< remove before use>###
 #!/bin/bash
@@ -301,7 +301,7 @@ if [[ -f "/dev/shm/canupdate.txt" ]] ; then
 
    # check last 5 blocks in db
 
-   n=$(( $l-5 ))
+   n=$(( $l-30 ))
    cd /home/user/E_iquidus &&
    /usr/bin/node --stack-size=2048 scripts/sync.js index check $n
 fi
