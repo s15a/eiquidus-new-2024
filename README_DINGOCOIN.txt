@@ -299,7 +299,7 @@ if [[ -f "/dev/shm/canupdate.txt" ]] ; then
    l=0
    l=$( mongosh explorerdb --eval "db.coinstats.find()" | grep "last\:" | grep -v "last\: 0," | sed "1,$ s/^\(.*\)last\: \(.*\),/\2/g" )
 
-   # check last 5 blocks in db
+   # check last n blocks in db
 
    n=$(( $l-30 ))
    cd /home/user/E_iquidus &&
