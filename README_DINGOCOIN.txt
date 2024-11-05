@@ -8,6 +8,7 @@ Index
 - Origin
 - Changes specific to DINGOCOIN
 - Metadata "author"
+- Links to external setup howtos
 - Scripts
 - Start script
 - Stop script
@@ -48,11 +49,23 @@ Changes specific to DINGOCOIN
 
 
 
-
 Metadata "author"
 =====================
 
 Metadata "author" (head) is "Various authors listed in file LICENSE (located on code root). Dingocoin specific settings added by Dingocoin Project.".
+
+
+
+
+Links to external setup howtos
+==================================
+
+Links have been available in documentation of old eIquidus version, but missing in last versions.
+
+https://gist.github.com/samqju/b9fc6c007f083e6429387051e24da1c3
+https://gist.github.com/scottie/b6179c34ce3cf200fcc5d08727a46623
+https://www.reddit.com/r/BiblePay/comments/7elm7r/iquidus_block_explorer_guide
+https://web.archive.org/web/20210228210054/https://stakeandnodes.net/iquidus-explorer-installation-guide/
 
 
 
