@@ -45,7 +45,7 @@ Changes specific to DINGOCOIN
 7.  Added robots.txt and sitemap.xml.
 8.  Added the Dingocoin theme public/css/themes/dingo/.
 9.  Dingocoin specific changes are described in file README_DINGOCOIN.txt.
-10. The ' - eIquidus' extension removed from html <title/ >, 'views/layout.pug' to maintain clean google response in search results. How-to is in the 'settings.json' template.
+10. The ' - ' + 'eIquidus' extension to html <title/ > has been changed. The ' - ' part removed from 'views/layout.pug'. To maintain clean google response in search results. How-to is in the 'settings.json' template.
  
 
 
