@@ -37,14 +37,15 @@ eIquidus explorer is forked from:
 Changes specific to DINGOCOIN
 =====================================
 
-2. Dingocoin config template. Dingocoin ready (insert users, passwords, database name at the top of file). Better social images are included. 
-3. Added Discord, X, Github and Telegram footer images to public/img (please see 1.).
-4. Added basic SEO meta data into the head: title, author and keywords. How-to add more meta data is described in settings.json as a comment.
-5. Dingocoin images everywhere.
-6. Dingocoin screenshot.
-7. Added robots.txt and sitemap.xml.
-8. Added the Dingocoin theme public/css/themes/dingo/.
-9. Dingocoin specific changes are described in file README_DINGOCOIN.txt.
+2.  Dingocoin config template. Dingocoin ready (insert users, passwords, database name at the top of file). Better social images are included. 
+3.  Added Discord, X, Github and Telegram footer images to public/img (please see 1.).
+4.  Added basic SEO meta data into the head: description, author and keywords. How-to add more meta data is described in settings.json as a comment.
+5.  Dingocoin images everywhere.
+6.  Dingocoin screenshot.
+7.  Added robots.txt and sitemap.xml.
+8.  Added the Dingocoin theme public/css/themes/dingo/.
+9.  Dingocoin specific changes are described in file README_DINGOCOIN.txt.
+10. The ' - eIquidus' extension removed from html <title/ >, 'views/layout.pug' to maintain clean google response in search results. How-to is in the 'settings.json' template.
  
 
 
