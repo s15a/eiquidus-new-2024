@@ -46,6 +46,8 @@ Changes specific to DINGOCOIN
 8.  Added the Dingocoin theme public/css/themes/dingo/.
 9.  Dingocoin specific changes are described in file README_DINGOCOIN.txt.
 10. The ' - ' + 'eIquidus' extension to html <title/ > has been changed. The ' - ' part removed from 'views/layout.pug'. To maintain clean google response in search results. How-to is in the 'settings.json' template.
+    Before: title=(page_title_prefix == null || page_title_prefix == '' ? settings.localization.error_title.replace('{1}', settings.coin.name) : page_title_prefix) + ' - ' + settings.shared_pages.page_title
+    Now: title=(page_title_prefix == null || page_title_prefix == '' ? settings.localization.error_title.replace('{1}', settings.coin.name) : page_title_prefix) + settings.shared_pages.page_title
  
 
 
