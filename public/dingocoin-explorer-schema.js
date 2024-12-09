@@ -61,14 +61,14 @@
       {
         "@type": "ListItem",
         "position": 5,
-        "name": "Orphaned Blocks",
-        "item": "https://explorer.dingocoin.com/orphans"
+        "name": "API",
+        "item": "https://explorer.dingocoin.com/info"
       }
       {
         "@type": "ListItem",
         "position": 6,
-        "name": "API",
-        "item": "https://explorer.dingocoin.com/info"
+        "name": "Orphaned Blocks",
+        "item": "https://explorer.dingocoin.com/orphans"
       }
     ]
   },
