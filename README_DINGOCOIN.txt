@@ -42,12 +42,17 @@ Changes specific to DINGOCOIN
 4.  Added basic SEO meta data into the head: description, author, keywords, x tags, og protocol tags. How-to add more meta data is described in settings.json as a comment.
 5.  Dingocoin images everywhere.
 6.  Dingocoin screenshot.
-7.  Added robots.txt and sitemap.xml.
+7.  Added public/robots.txt and public/sitemap.xml.
 8.  Added the Dingocoin theme public/css/themes/dingo/.
 9.  Dingocoin specific changes are described in file README_DINGOCOIN.txt.
 10. The ' - ' + 'eIquidus' extension to html <title/ > has been changed. The ' - ' part removed from 'views/layout.pug'. To maintain clean google response in search results. How-to is in the 'settings.json' template.
     Before: title=(page_title_prefix == null || page_title_prefix == '' ? settings.localization.error_title.replace('{1}', settings.coin.name) : page_title_prefix) + ' - ' + settings.shared_pages.page_title
     Now: title=(page_title_prefix == null || page_title_prefix == '' ? settings.localization.error_title.replace('{1}', settings.coin.name) : page_title_prefix) + settings.shared_pages.page_title
+    Files views/layout.pug, /settings.json.
+11. Added a Copyright link to file /CREDITS.txt. Located in footer, first on left. File views/layout.pug.
+12. Added copyright "© 2023-2024 Dingocoin.com - All Right Reserved." as a link to Dingocoin git. Middle of the footer. File /settings.json.
+13. Added schema markup to head. Also in a readme example file /schema_dingocoin_readme.txt. Files views/layout.pug, /settings.json.
+14. Added additional meta tags (to head, file views/layout.pug) and related images. X and Og protocol meta. File views/layout.pug.
  
 
 
