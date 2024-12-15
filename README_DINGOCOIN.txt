@@ -47,7 +47,7 @@ Changes specific to DINGOCOIN
 9.  Dingocoin specific changes are described in file README_DINGOCOIN.txt.
 10. The ' - ' + 'eIquidus' extension to html <title/ > has been changed. The ' - ' part removed from 'views/layout.pug'. Files views/layout.pug, /settings.json.
 11. Added a Copyright link to file /CREDITS.txt. Located in footer, first on left. File views/layout.pug.
-12. Added copyright "© 2023-2024 Dingocoin.com - All Right Reserved." as a link to Dingocoin git. Middle of the footer. File /settings.json.
+12. Added copyright "© 2023-2024 Dingocoin.com - All Right Reserved." as a link to dingocoin web page. Middle of the footer. File /settings.json.
 13. Added schema markup to head. Also in a readme example file /schema_dingocoin_readme.txt. Files views/layout.pug, /settings.json.
 14. Added additional meta tags (to head, file views/layout.pug) and related images. X and Og protocol meta. File views/layout.pug.
 15. Footer height became adaptive. Social links on left of it became fluid, their layout can adapt to window width. File views/layout.pug.
