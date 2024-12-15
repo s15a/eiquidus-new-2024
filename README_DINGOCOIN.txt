@@ -51,6 +51,7 @@ Changes specific to DINGOCOIN
 13. Added schema markup to head. Also in a readme example file /schema_dingocoin_readme.txt. Files views/layout.pug, /settings.json.
 14. Added additional meta tags (to head, file views/layout.pug) and related images. X and Og protocol meta. File views/layout.pug.
 15. Footer height became adaptive. Social links on left of it became fluid, their layout can adapt to window width. File views/layout.pug.
+16. Added configurable parameter "home_link_url" and target='_blank' to the top left logo or text. Originaly was "/" burned into views/layout.pug. Files views/layout.pug, settings.json, lib/settings.js.
  
 
 
