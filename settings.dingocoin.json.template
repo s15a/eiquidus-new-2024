@@ -464,7 +464,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Github
           "tooltip_text": "Copyright",
           // url: The exact url that the social link should navigate to
