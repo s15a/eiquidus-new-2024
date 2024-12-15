@@ -383,19 +383,33 @@ html(lang='en')
       function fixFooterHeightAndPosition() {
         const screenWidth = $(window).outerWidth();
         let socialLinkHeight = 70;
+        // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
+        let socialBlinkHeight = '50';
 
         if (screenWidth <= 575) {
           // mobile
           $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_mobile}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_mobile};
+          // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
+          x1 = '!{settings.shared_pages.page_footer.footer_height_mobile}';
+          x2 = x1.replace("px", "");
+          socialBlinkHeight = x2.replace("%", "");
         } else if (screenWidth >= 576 && screenWidth <= 991) {
           // tablet
           $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_tablet}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_tablet};
+          // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
+          x1 = '!{settings.shared_pages.page_footer.footer_height_tablet}';
+          x2 = x1.replace("px", "");
+          socialBlinkHeight = x2.replace("%", "");
         } else {
           // desktop
           $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_desktop}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_desktop};
+          // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
+          x1 = '!{settings.shared_pages.page_footer.footer_height_desktop}';
+          x2 = x1.replace("px", "");
+          socialBlinkHeight = x2.replace("%", "");
         }
 
         if (!#{settings.shared_pages.page_footer.sticky_footer}) {
@@ -417,7 +431,10 @@ html(lang='en')
         }
 
         // fix social link font size
-        const fontSize = $('#footer-container').height() * (socialLinkHeight / 100);
+        // measured value of footer div (that was to become font and image size) commented:
+        // const fontSize = $('#footer-container').height() * (socialLinkHeight / 100);
+        // use the "footer-cointainer" div height from database settings.json instead of measuring it, px and % signs cleaned out:
+        const fontSize = socialBlinkHeight * (socialLinkHeight / 100);
         $('#footer-container .social-link').css('font-size', fontSize);
         $('#footer-container .social-link > img').css('width', fontSize + 'px').css('height', fontSize + 'px');
       }
