@@ -513,7 +513,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Twitter
           "tooltip_text": "Discord",
           // url: The exact url that the social link should navigate to
-          "url": "https://discord.gg/y3J946HFQM",
+          "url": "https://discord.gg/9DxYCp9ttX",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "",
           // image_path: The path to an image file that will be displayed for this social link
