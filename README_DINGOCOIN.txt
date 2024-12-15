@@ -53,6 +53,7 @@ Changes specific to DINGOCOIN
 15. Footer height became adaptive. Social links on left of it became fluid, their layout can adapt to window width. File views/layout.pug.
 16. Added configurable parameter "home_link_url" and target='_blank' to the top left logo or text. Originaly was "/" burned into views/layout.pug. Files views/layout.pug, settings.json, lib/settings.js.
 17. Added Credits link to bottom left corner and description text of it. Goes to code root of eIquidus.
+18. BTC logo changed to pie in the 'richlist' menu link.
  
 
 
