@@ -467,11 +467,11 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": false,
+          "enabled": true,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Github
-          "tooltip_text": "Copyright",
+          "tooltip_text": "explorer Credits: file LICENSE",
           // url: The exact url that the social link should navigate to
-          "url": "/CREDITS.txt",
+          "url": "https://github.com/dingocoin/eiquidus",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fa-regular fa-copyright",
           // image_path: The path to an image file that will be displayed for this social link
