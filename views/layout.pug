@@ -388,7 +388,7 @@ html(lang='en')
 
         if (screenWidth <= 575) {
           // mobile
-          $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_mobile}');
+          $('#footer-container').css('min-height', '!{settings.shared_pages.page_footer.footer_height_mobile}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_mobile};
           // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
           x1 = '!{settings.shared_pages.page_footer.footer_height_mobile}';
@@ -396,7 +396,7 @@ html(lang='en')
           socialBlinkHeight = x2.replace("%", "");
         } else if (screenWidth >= 576 && screenWidth <= 991) {
           // tablet
-          $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_tablet}');
+          $('#footer-container').css('min-height', '!{settings.shared_pages.page_footer.footer_height_tablet}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_tablet};
           // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
           x1 = '!{settings.shared_pages.page_footer.footer_height_tablet}';
@@ -404,7 +404,7 @@ html(lang='en')
           socialBlinkHeight = x2.replace("%", "");
         } else {
           // desktop
-          $('#footer-container').css('height', '!{settings.shared_pages.page_footer.footer_height_desktop}');
+          $('#footer-container').css('min-height', '!{settings.shared_pages.page_footer.footer_height_desktop}');
           socialLinkHeight = !{settings.shared_pages.page_footer.social_link_percent_height_desktop};
           // read the "footer-cointainer" div height from database settings.json instead of measuring it, let it be without unit (px or %)
           x1 = '!{settings.shared_pages.page_footer.footer_height_desktop}';
