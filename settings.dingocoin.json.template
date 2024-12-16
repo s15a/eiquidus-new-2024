@@ -88,7 +88,7 @@
     //          If set to false, historical data such as network hashrate and difficulty values will not be saved or available for network charts
     "enabled": true,
     // max_saved_records: The maximum # of blocks to save historical data for
-    "max_saved_records": 120
+    "max_saved_records": 1440
   },
 
   /* Shared page settings */
@@ -239,7 +239,7 @@
           //                M: Display value in megahashes (MH/s)
           //                K: Display value in kilohashes (KH/s)
           //                H: Display value in hashes (H/s)
-          "nethash_units": "G"
+          "nethash_units": "T"
         },
         // difficulty_panel: a collection of settings that pertain to the difficulty panel which displays the current proof-of-work difficulty (only applicable to POW coins)
         "difficulty_panel": {
