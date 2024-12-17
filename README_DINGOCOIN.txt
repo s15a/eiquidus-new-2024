@@ -377,25 +377,34 @@ for i in 1 2 3 4 5 6 7 8 9 10 ; do
    b=""
    s1=404
    s2=404
+   t1=0
+   t2=0
 
-   # regular state
+   # get state of explorers
    a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution )
    b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution )
    # decimals disturbed - test only
    #a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
    #b=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer2.dingocoin.com/ext/getdistribution | sed '1,$ s/"total":"\([0-9]*\)\.\([0-9]*\)"/"total":"\1\."/g' | sed '1,$ s/"supply":\([0-9]*\)\.\([0-9]*\)/"supply":\1\./g' )
 
+   # http status codes, 200 means up running
    s1=$( echo $a | sed "1,$ s/^\(.*\) STATUS_CODE=\(.*\)$/\2/" )
    s2=$( echo $b | sed "1,$ s/^\(.*\) STATUS_CODE=\(.*\)$/\2/" )
+
+   # is any explorer up and running but in db sync state? don't act while one of them is syncing. percents and totals are 0, 0.000000 during sync.
+   t1=$( echo $a | grep \{"\"percent\"":\"0.00\",\"total\":\"0.00000000\"\} | wc -l )
+   t2=$( echo $b | grep \{"\"percent\"":\"0.00\",\"total\":\"0.00000000\"\} | wc -l )
 
    echo -e "$( date +"%F %H:%M:%S" ) \t a ... $a" >> ~/db_sync_check.log
    echo -e "$( date +"%F %H:%M:%S" ) \t b ... $b" >> ~/db_sync_check.log
    echo -e "$( date +"%F %H:%M:%S" ) \t status1 ... $s1" >> ~/db_sync_check.log
    echo -e "$( date +"%F %H:%M:%S" ) \t status2 ... $s2" >> ~/db_sync_check.log
+   echo -e "$( date +"%F %H:%M:%S" ) \t t1 ... $t1" >> ~/db_sync_check.log
+   echo -e "$( date +"%F %H:%M:%S" ) \t t2 ... $t2" >> ~/db_sync_check.log
 
-   # http status 200 only accepted as regular result
+   # http status 200 only accepted as regular result, db sync not running on any of explorers
 
-   if [[ $a != $b ]] && [[ $s1 -eq 200 ]] && [[ $s2 -eq 200 ]] ; then
+   if [[ $a != $b ]] && [[ $s1 -eq 200 ]] && [[ $s2 -eq 200 ]]  && [[ $t1 -eq 0 ]] && [[ $t2 -eq 0 ]] ; then
       sum=$(( $sum + 1 ))
    else
       sum=$(( $sum + 0 ))
