@@ -370,6 +370,8 @@ a=""
 b=""
 s1=404
 s2=404
+t1=99
+t2=99
 sum=0
 
 for i in 1 2 3 4 5 6 7 8 9 10 ; do
@@ -377,8 +379,8 @@ for i in 1 2 3 4 5 6 7 8 9 10 ; do
    b=""
    s1=404
    s2=404
-   t1=0
-   t2=0
+   t1=99
+   t2=99
 
    # get state of explorers
    a=$( curl -sw ' STATUS_CODE=%{http_code}' https://explorer1.dingocoin.com/ext/getdistribution )
