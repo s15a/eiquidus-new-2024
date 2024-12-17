@@ -455,11 +455,11 @@
       // Desktop (>= 992px)
       // Supports any valid height value in pixels (Ex: "50px") or percent (Ex: "10%")
       // footer_height_desktop: Forced footer height value for desktop screens
-      "footer_height_desktop": "50px",
+      "footer_height_desktop": "40px",
       // footer_height_tablet: Forced footer height value for tablet screens
-      "footer_height_tablet": "70px",
+      "footer_height_tablet": "56px",
       // footer_height_mobile: Forced footer height value for mobile screens
-      "footer_height_mobile": "70px",
+      "footer_height_mobile": "56px",
       // social_links: a collection of settings that pertain to the social links on the page footer
       //               Add as many custom social links to be displayed in the page footer as desired
       //               For each entry you must fill in the image_path or fontawesome_class to determine the image or icon to show for the url link. It is not necessary to fill in both as only the 1st filled-in value will be used
